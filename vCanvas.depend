@@ -1,0 +1,61 @@
+# depslib dependency file v1.0
+1515173349 source:/home/sampuc/Documents/Cpp/Proj/vCanvas/detect.cpp
+	"detect.h"
+
+1512237481 /home/sampuc/Documents/Cpp/Proj/vCanvas/detect.h
+	"includes.h"
+
+1512008314 /home/sampuc/Documents/Cpp/Proj/vCanvas/includes.h
+	<cv.hpp>
+	<cv.h>
+	<highgui.h>
+	<iostream>
+	<string>
+	<algorithm>
+	<ctime>
+	<vector>
+	<chrono>
+
+1515954659 source:/home/sampuc/Documents/Cpp/Proj/vCanvas/draw.cpp
+	"draw.h"
+
+1512238952 /home/sampuc/Documents/Cpp/Proj/vCanvas/draw.h
+	"detect.h"
+
+1515508970 source:/home/sampuc/Documents/Cpp/Proj/vCanvas/main.cpp
+	"includes.h"
+	"draw.h"
+
+1512061073 /home/sampuc/Documents/Cpp/Proj/vCanvas/p8.h
+	"includes.h"
+
+1513177754 source:/home/sampuc/Documents/Cpp/Proj/vCanvas/p8.cpp
+	"p8.h"
+
+1516013491 source:d:\[c] data\documents\cpp\vcanvas\detect.cpp
+	"detect.h"
+
+1512212280 d:\[c] data\documents\cpp\vcanvas\detect.h
+	"includes.h"
+
+1516012245 d:\[c] data\documents\cpp\vcanvas\includes.h
+	<opencv/cv.hpp>
+	<opencv2/opencv.hpp>
+	<opencv/highgui.h>
+	<iostream>
+	<string>
+	<algorithm>
+	<ctime>
+	<vector>
+	<chrono>
+
+1516013454 source:d:\[c] data\documents\cpp\vcanvas\main.cpp
+	"includes.h"
+	"draw.h"
+
+1512213752 d:\[c] data\documents\cpp\vcanvas\draw.h
+	"detect.h"
+
+1516012925 source:d:\[c] data\documents\cpp\vcanvas\draw.cpp
+	"draw.h"
+
