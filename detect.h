@@ -13,8 +13,8 @@ class detect
         void createTrackbars();
 
     public:
-        void objDetect(Mat&,int);
-        void objTrack(Mat&,int&,int&,int);
+        void objDetect(Mat&,int,Scalar);
+        void objTrack(Mat&,int&,int&,int,Scalar);
 
         void setMorph(int,int,int=0);
         void setSmooth(int,int=0);

@@ -25,29 +25,29 @@ void draw::setDet(detect &det)
 
 void draw::drawVector(Mat &frame)
 {   if(canvas.size()>0)
-        for(int i=0;i<canvas.size();i++)
-            if(canvas[i].points.size()>1)
+    {   for(int i=0;i<(int)canvas.size();i++)
+        {   if(canvas[i].points.size()>1)
             {   if(canvas[i].ptType==1)
-                {   for(int j=0;j<canvas[i].points.size()-1;j++)
+                {   for(int j=0;j<(int)canvas[i].points.size()-1;j++)
                         line(frame,Point(canvas[i].points[j].first,canvas[i].points[j].second),Point(canvas[i].points[j+1].first,canvas[i].points[j+1].second),canvas[i].color,canvas[i].ptSize+1);
                 }
                 if(canvas[i].ptType==2)
                 {   int j = 0;
-                    for(j;j<canvas[i].points.size()-1;j++)
+                    for(j=0;j<(int)canvas[i].points.size()-1;j++)
                         line(frame,Point(canvas[i].points[j].first,canvas[i].points[j].second),Point(canvas[i].points[j+1].first,canvas[i].points[j+1].second),canvas[i].color,canvas[i].ptSize+1);
                     line(frame,Point(canvas[i].points[j].first,canvas[i].points[j].second),Point(canvas[i].points[0].first,canvas[i].points[0].second),canvas[i].color,canvas[i].ptSize+1);
                 }
                 if(canvas[i].ptType==3)
-                {   for(int j=0;j<canvas[i].points.size()-1;j++)
+                {   for(int j=0;j<(int)canvas[i].points.size()-1;j++)
                         cv::circle(frame,Point(canvas[i].points[j].first,canvas[i].points[j].second),(canvas[i].ptSize+1)*2,canvas[i].color,-1);
                 }
             }
+        }
+    }
 }
 
 void draw::ui(Mat &frame, int H)
-{   int thick   = 2;
-    int btnWdh  = frame.cols/8;
-    Mat control = imread("canvas.png",1);
+{   Mat control = imread("canvas.png",1);
 
     char buff[3];
     sprintf(buff, "%d", ptSize);

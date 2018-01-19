@@ -59,3 +59,30 @@
 1516012925 source:d:\[c] data\documents\cpp\vcanvas\draw.cpp
 	"draw.h"
 
+1516389568 source:d:\[c] data\documents\github\vcanvas\detect.cpp
+	"detect.h"
+
+1516267532 d:\[c] data\documents\github\vcanvas\detect.h
+	"includes.h"
+
+1516012245 d:\[c] data\documents\github\vcanvas\includes.h
+	<opencv/cv.hpp>
+	<opencv2/opencv.hpp>
+	<opencv/highgui.h>
+	<iostream>
+	<string>
+	<algorithm>
+	<ctime>
+	<vector>
+	<chrono>
+
+1516389420 source:d:\[c] data\documents\github\vcanvas\draw.cpp
+	"draw.h"
+
+1512213752 d:\[c] data\documents\github\vcanvas\draw.h
+	"detect.h"
+
+1516389489 source:d:\[c] data\documents\github\vcanvas\main.cpp
+	"includes.h"
+	"draw.h"
+

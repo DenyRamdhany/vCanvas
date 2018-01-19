@@ -5,7 +5,7 @@ int frameW = 640;
 int frameH = 480;
 int state  = 0;
 
-int main(int argc, char* argv[])
+int main()
 {   detect det;
     draw canvas;
     Mat camera;
@@ -17,6 +17,7 @@ int main(int argc, char* argv[])
     det.setTresh(Scalar(100,40,10),Scalar(200,180,255));
 
     canvas.setDet(det);
+    //canvas.setDrawState(0);
 
 	VideoCapture capture;
 	capture.open(0);
@@ -27,13 +28,15 @@ int main(int argc, char* argv[])
     {   capture.read(camera);
         flip(camera,camera,1);
 
-		det.objDetect(camera,5);
-		//det.calibrate();
+		(state)?det.objDetect(camera,4,Scalar(0,255,255)):det.objDetect(camera,4,Scalar(0,0,255));
+		det.calibrate();
+		canvas.setDrawState(state);
 		canvas.objTrack(camera);
+
 		resize(camera,camera,Size(frameW*1.5,frameH*1.5));
         imshow("DrawME", camera);
 
-		waitKey(1);
+		if((char)waitKey(1) == 32)(state==1)?state=0:state=1;
 	}
 	return 0;
 }
